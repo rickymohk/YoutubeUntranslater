@@ -106,9 +106,10 @@ async function untranslate(apiKey)
         log.error("No API key");
         return;
     }
+    const isLive = document.querySelector(".ytp-live") != null;
     let mainVidId;
     // log.info("isMainChanged",isMainChanged);
-    if(!isMainChanged)
+    if(!isMainChanged && !isLive)
     {
         mainVidId = window.location.pathname == "/watch" && new URLSearchParams(location.search).get("v");
     }

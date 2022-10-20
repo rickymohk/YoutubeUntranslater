@@ -212,7 +212,7 @@ async function untranslate(apiKey)
             noApiKey = !isApiKeyValid;
             if(noApiKey)
             {
-                GM.deleteValue(API_KEY);
+                // GM.deleteValue(API_KEY);
                 log.error("API key fail. Please Reload");
             }
         }
